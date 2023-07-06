@@ -9,10 +9,41 @@
     */
 
     //ENTRADA
-    const numero = Number(prompt(`Informe um número inteiro.`));
-    const numero2 = Number(prompt(`Informe um outro número inteiro.`));
-    const operacao = prompt(`Informe qual operação você deseja realizar (+ para adição, - para subtração, * para multiplicação e / para divisão).`);
-    
+    let numero = Number(prompt(`Informe um número inteiro.`).trim().replace(",", "."));
+    let numero2 = Number(prompt(`Informe um outro número inteiro.`).trim().replace(",", "."));
+    const operacao = prompt(`Informe qual operação você deseja realizar (+ para adição, - para subtração, * para multiplicação e / para divisão).`).trim();
+    let numero3 = 0;
+    let mensagemFinal;
+    switch (operacao) {
+        case "+":
+            numero3 = numero + numero2;
+            break;
+        case "-":
+            numero3 = numero - numero2; 
+            break;
+        case "*": 
+            numero3 = numero * numero2;
+            break;
+        case "/":
+            numero3 = numero / numero2;
+            break;
+        default:
+            document.write (`Resposta inválida.`);
+            break;
+    }
+    if (!isNaN(numero3)) {
+        if (numero3 % 2 == 0) document.write(`${numero3} é par.`);
+        else alert (`${numero3} é iḿpar.`);
+
+        if (numero3 >= 0) document.write (`${numero3} é positivo.`);
+        else document.write (`${numero3} é negativo.`);
+
+        if (Number.isInteger(numero3)) document.write (`${numero3} é inteiro.`);
+        else document.write (`${numero3} é decimal.`);
+
+    }
+    else document.write(`Resposta inválida.`);
+
     //PROCESSAMENTO
 
     

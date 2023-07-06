@@ -6,11 +6,67 @@
     */
 
     //ENTRADA
-    const hemisferio = prompt(`Informe em qual hemisfério você está localizado. (Responda com S para sul e N para norte)`).trim().toLowerCase();
-    const mes = Number(prompt(`Informe o mês atual. (Responda com número como janeiro = 1)`).trim());
-    
-    //PROCESSAMENTO
+    const hemisferio = prompt(`Informe em qual hemisfério você está localizado. (Responda com S para sul e N para norte)`).trim().toUpperCase();
+    const mes = prompt(`Informe o mês atual. (Responda por extenso`);
 
+    //PROCESSAMENTO
+    switch (hemisferio) {
+        case "s":
+            switch (mes) {
+                case "janeiro":
+                case "fevereiro":
+                case "março":
+                    document.write(`È verão.`);
+                    break
+                case "abril":
+                case "maio":
+                case "junho":
+                    document.write(`È outono.`);
+                    break;
+                case "julho":
+                case "agosto":
+                case "setembro":
+                    document.write(`È inverno.`);
+                    break;
+                case "outubro":
+                case "novembro":
+                case "dezembro":
+                    document.write(`È primavera.`);
+                    break;
+                default:
+                    document.write(`Houve algum erro.`);
+                    break;
+            }
+            break;
+        case "n":
+            switch (mes) {
+                case "janeiro":
+                case "fevereiro":
+                case "março":
+                    document.write(`È inverno.`);
+                    break
+                case "abril":
+                case "maio":
+                case "junho":
+                    document.write(`È primavera.`);
+                    break;
+                case "julho":
+                case "agosto":
+                case "setembro":
+                    document.write(`È verão.`);
+                    break;
+                case "outubro":
+                case "novembro":
+                case "dezembro":
+                    document.write(`È outono.`);
+                    break;
+                default:
+                    document.write(`Houve algum erro.`);
+                    break;
+            }
+            break;
+
+    }
 
     //SAÍDA
 

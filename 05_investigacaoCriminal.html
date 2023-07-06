@@ -13,13 +13,53 @@
     */
 
     //ENTRADA
-    const p1 = (prompt("Telefonou para a vítima? Responda com S para sim e N para não.").trim().replace(",", "."));
-    const p2 = (prompt("Esteve no local do crime?Responda com S para sim e N para não.").trim().replace(",", "."));
-    const p3 = (prompt("Mora perto da vítima?Responda com S para sim e N para não.").trim().replace(",", "."));
-    const p4 = (prompt("Devia para a vítima?Responda com S para sim e N para não.").trim().replace(",", "."));
-    const p5 = (prompt("Já trabalhou com a vítima?Responda com S para sim e N para não.").trim().replace(",", "."));
+    const p1 = prompt("Telefonou para a vítima? Responda com S para sim e N para não.").trim().toLowerCase;
+    const p2 = prompt("Esteve no local do crime?Responda com S para sim e N para não.").trim().toLowerCase;
+    const p3 = prompt("Mora perto da vítima?Responda com S para sim e N para não.").trim().toLowerCase;
+    const p4 = prompt("Devia para a vítima?Responda com S para sim e N para não.").trim().toLowerCase;
+    const p5 = prompt("Já trabalhou com a vítima?Responda com S para sim e N para não.").trim().toLowerCase;
+    let sins = 0;
 
     //PROCESSAMENTO
+    switch (p1) {
+        case "s":
+            sins++;
+            break;
+    }
+    switch (p2) {
+        case "s":
+            sins++;
+            break;
+    }
+    switch (p3) {
+        case "s":
+            sins++;
+            break;
+    }
+    switch (p4) {
+        case "s":
+            sins++;
+            break;
+    }
+    switch (p5) {
+        case "s":
+            sins++;
+            break;
+    }
+    switch (sins) {
+        case 2:
+            alert(`Você é suspeito.`);
+            break;
+        case 3:
+        case 4:
+            alert(`Você é cúmplice.`);
+            break;
+        case 5: 
+            alert(`Voce é o assassino.`);
+        default:
+            alert(`Você é inocente.`);
+            break;
+    }
 
 
     //SAÍDA
