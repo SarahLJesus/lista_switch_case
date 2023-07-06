@@ -12,11 +12,24 @@
     */
 
     //ENTRADA
-    
-    
-    //PROCESSAMENTO
+    const turno = prompt(`Em que turno você estuda? (digite M-matutino ou V-Vespertino ou N- Noturno.)`);
 
-    
+    //PROCESSAMENTO
+    switch (turno) {
+        case "m":
+            document.write(`Bom dia!`);
+            break;
+        case "v":
+            document.write(`Boa Tarde!`);
+            break;
+        case "n":
+            document.write(`Boa Noite!`);
+            break;
+        default:
+            document.write(`Valor inválido!`);
+            break;
+    }
+
     //SAÍDA
 
 </script>
